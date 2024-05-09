@@ -7,11 +7,6 @@ public class Randomizer : MonoBehaviour
     [SerializeField]
     private RandomizerData _data;
 
-    [Separator(2, 20)]
-
-    [SerializeField]
-    private int _health;
-
     public RandomizerData Data => _data;
 
     private void Awake()
