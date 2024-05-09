@@ -4,12 +4,12 @@ using UnityEngine;
 
 [System.AttributeUsage(System.AttributeTargets.Field,
     AllowMultiple = true)]
-public class SeperatorAttribute : PropertyAttribute
+public class SeparatorAttribute : PropertyAttribute
 {
     public readonly float Height;
     public readonly float Spacing;
 
-    public SeperatorAttribute(float height = 1, float spacing = 10)
+    public SeparatorAttribute(float height = 1, float spacing = 10)
     {
         Height = height;
         Spacing = spacing;
