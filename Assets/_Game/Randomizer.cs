@@ -20,6 +20,7 @@ public class Randomizer : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
+        Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, _data.Range);
     }
 }
