@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2afa56b29118f4d41b43a0a16b992955, type: 3}
   m_Name: RandomizerData_Cube
   m_EditorClassIdentifier: 
-  _name: ...
+  _name: Cube
   _amount: 0
-  _range: 1
+  _range: 10
   _rotate: 0
   _scale: 1
