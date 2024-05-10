@@ -12,10 +12,9 @@ public class Randomizer : MonoBehaviour
     private void Awake()
     {
         Debug.Log("Name: " + _data.Name);
-        Debug.Log("Amount: " + _data.Scale);
+        Debug.Log("Amount: " + _data.Amount);
         Debug.Log("Range: " + _data.Range);
         Debug.Log("Rotate: " + _data.Rotate);
-        Debug.Log("Scale: " + _data.Scale);
     }
 
     private void OnDrawGizmosSelected()

@@ -11,7 +11,6 @@ public class RandomizerDataEditor : Editor
     private SerializedProperty _amount;
     private SerializedProperty _range;
     private SerializedProperty _rotate;
-    private SerializedProperty _scale;
 
     private void OnEnable()
     {
@@ -19,7 +18,6 @@ public class RandomizerDataEditor : Editor
         _amount = serializedObject.FindProperty("_amount");
         _range = serializedObject.FindProperty("_range");
         _rotate = serializedObject.FindProperty("_rotate");
-        _scale = serializedObject.FindProperty("_scale");
     }
     public override void OnInspectorGUI()
     {
@@ -45,9 +43,9 @@ public class RandomizerDataEditor : Editor
             EditorGUILayout.HelpBox("Warning: Can't have negative range",
                 MessageType.Warning);
         }
-        if (_scale.intValue < 0)
+        if (_rotate.intValue < 0)
         {
-            EditorGUILayout.HelpBox("Warning: Can't have negative scale",
+            EditorGUILayout.HelpBox("Warning: Can't have negative rotate",
                 MessageType.Warning);
         }
     }

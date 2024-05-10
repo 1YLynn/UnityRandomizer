@@ -17,12 +17,9 @@ public class RandomizerData : ScriptableObject
     [SerializeField]
     [Range(0, 360)]
     private int _rotate = 0;
-    [SerializeField]
-    private int _scale = 1;
 
     public string Name => _name;
     public int Amount => _amount;
     public int Range => _range;
     public int Rotate => _rotate;
-    public int Scale => _scale;
 }
