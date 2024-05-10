@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: RandomizerData_Cube
   m_EditorClassIdentifier: 
   _name: Cube
-  _amount: 1
-  _range: 20
+  _range: 10
