@@ -10,13 +10,9 @@ public class RandomizerData : ScriptableObject
     [SerializeField]
     private string _name = "...";
     [SerializeField]
-    [Tooltip("Amount of items that will generate")]
-    private int _amount = 0;
-    [SerializeField]
     [Tooltip("Range size where the items will generate")]
     private int _range = 1;
 
     public string Name => _name;
-    public int Amount => _amount;
     public int Range => _range;
 }

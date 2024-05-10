@@ -15,7 +15,6 @@ public class Randomizer : MonoBehaviour
     private void Awake()
     {
         Debug.Log("Name: " + _data.Name);
-        Debug.Log("Amount: " + _data.Amount);
         Debug.Log("Range: " + _data.Range);
     }
 
@@ -25,23 +24,13 @@ public class Randomizer : MonoBehaviour
         Gizmos.DrawWireCube(transform.position, new Vector3(-_data.Range*2, transform.position.y, _data.Range*2));
     }
 
-    private void Update()
+    private void OnGUI()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (GUI.Button(new Rect(10, 10, 100, 50), "Randomize"))
         {
-            for (var i = 0; i < _data.Amount; i++)
-            {
-                /*
-                GameObject obj = Instantiate(prefab);
-                obj.transform.position = new Vector3(Random.Range(-_data.Range, _data.Range),
+            var position = new Vector3(Random.Range(-_data.Range, _data.Range),
                     transform.position.y, Random.Range(-_data.Range, _data.Range));
-                */
-                
-                var position = new Vector3(Random.Range(-_data.Range, _data.Range),
-                    transform.position.y, Random.Range(-_data.Range, _data.Range));
-                Instantiate(prefab, position, Quaternion.identity);
-                
-            }
+            Instantiate(prefab, position, Quaternion.identity);
         }
     }
 }
