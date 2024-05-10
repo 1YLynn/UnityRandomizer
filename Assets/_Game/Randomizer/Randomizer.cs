@@ -10,6 +10,8 @@ public class Randomizer : MonoBehaviour
 
     public RandomizerData Data => _data;
 
+    public GameObject prefab;
+
     private void Awake()
     {
         Debug.Log("Name: " + _data.Name);
@@ -22,5 +24,14 @@ public class Randomizer : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, _data.Range);
+    }
+
+    private void Start()
+    {
+        if(_data.Amount > 0)
+        {
+            var position = new Vector3(Random.Range(-_data.Range, _data.Range), transform.position.y, Random.Range(-_data.Range, _data.Range));
+            Instantiate(prefab, position, Quaternion.identity);
+        }
     }
 }
