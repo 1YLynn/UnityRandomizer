@@ -17,21 +17,31 @@ public class Randomizer : MonoBehaviour
         Debug.Log("Name: " + _data.Name);
         Debug.Log("Amount: " + _data.Amount);
         Debug.Log("Range: " + _data.Range);
-        Debug.Log("Rotate: " + _data.Rotate);
     }
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, _data.Range);
+        Gizmos.DrawWireCube(transform.position, new Vector3(-_data.Range*2, transform.position.y, _data.Range*2));
     }
 
-    private void Start()
+    private void Update()
     {
-        if(_data.Amount > 0)
+        if(Input.GetKeyDown(KeyCode.Space))
         {
-            var position = new Vector3(Random.Range(-_data.Range, _data.Range), transform.position.y, Random.Range(-_data.Range, _data.Range));
-            Instantiate(prefab, position, Quaternion.identity);
+            for (var i = 0; i < _data.Amount; i++)
+            {
+                /*
+                GameObject obj = Instantiate(prefab);
+                obj.transform.position = new Vector3(Random.Range(-_data.Range, _data.Range),
+                    transform.position.y, Random.Range(-_data.Range, _data.Range));
+                */
+                
+                var position = new Vector3(Random.Range(-_data.Range, _data.Range),
+                    transform.position.y, Random.Range(-_data.Range, _data.Range));
+                Instantiate(prefab, position, Quaternion.identity);
+                
+            }
         }
     }
 }

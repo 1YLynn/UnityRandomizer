@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: RandomizerData_Cube
   m_EditorClassIdentifier: 
   _name: Cube
-  _amount: 0
-  _range: 10
-  _rotate: 0
+  _amount: 1
+  _range: 20

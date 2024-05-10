@@ -15,12 +15,8 @@ public class RandomizerData : ScriptableObject
     [SerializeField]
     [Tooltip("Range size where the items will generate")]
     private int _range = 1;
-    [SerializeField]
-    [Range(0, 360)]
-    private int _rotate = 0;
 
     public string Name => _name;
     public int Amount => _amount;
     public int Range => _range;
-    public int Rotate => _rotate;
 }

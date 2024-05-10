@@ -568,6 +568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data: {fileID: 11400000, guid: 0fc8eb893ac9f2e429c11c19eaea14b2, type: 2}
+  prefab: {fileID: 2078100768}
 --- !u!65 &2078100770
 BoxCollider:
   m_ObjectHideFlags: 0
